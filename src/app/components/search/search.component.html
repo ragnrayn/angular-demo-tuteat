@@ -3,25 +3,25 @@
         <picture>
           <source
             media="(min-width: 1441px)"
-            srcset="../../../assets/icons/steps.svg"/>
+            srcset="/assets/icons/steps.svg"/>
           <source
             media="(min-width: 1024px)"
-            srcset="../../../assets/icons/steps-middle.svg"
+            srcset="/assets/icons/steps-middle.svg"
           />
           <source
             media="(min-width: 600px)"
-            srcset="../../../assets/icons/steps-tablet.svg"
+            srcset="/assets/icons/steps-tablet.svg"
           />
           <img class="search-box__steps" src="" alt=""/>
         </picture>
         <picture>
           <source
             media="(max-width: 600px)"
-            srcset="../../../assets/icons/logo-tuteat-big-mobile.svg"
+            srcset="/assets/icons/logo-tuteat-big-mobile.svg"
           />
           <img
             class="logo logo--big"
-            src="../../../assets/icons/logo-tuteat-big.svg"
+            src="/assets/icons/logo-tuteat-big.svg"
             alt="logotype tuteat"
             width="384"
           />
@@ -36,7 +36,7 @@
             />
             <span class="search-form__icon icon-location" (click)="getCurrentCoords(); toggleLoader()"></span>
             <div class="loader">
-              <img src="../../../assets/images/loader-transparent.gif" class="loader-gif" alt="">
+              <img src="/assets/images/loader-transparent.gif" class="loader-gif" alt="">
             </div>
             <span class="search-form__close icon-close"></span>
             <ul class="search-form__list" [ngClass]="possibleStreets.results ? 'active' : ''">

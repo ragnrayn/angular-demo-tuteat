@@ -1,0 +1,165 @@
+<div class="overlay-popup" [ngSwitch]="switchPopupValue">
+  <div class="popup" *ngSwitchCase="'login-by-services'">
+    <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+    <h3 class="popup__title">увійти</h3>
+    <p class="popup__text">
+      Ще не зареєстровані в TUTEAT?
+      <span class="popup__reg" (click)="changeLogin('signup-by-services')">Реєстрація</span>
+    </p>
+    <a href="#" class="popup__link google">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Google.svg" alt="google" />
+      Увійти з Google
+    </a>
+    <a href="#" class="popup__link apple">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Apple.svg" alt="google" />
+      Увійти з Apple
+    </a>
+    <span href="#" class="popup__link email" (click)="changeLogin('login-by-email')">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Mail.svg" alt="google" />
+      Увійти з Email
+    </span>
+    <div class="popup-footer">
+      <span href="#" class="popul_link login-by-phone" (click)="changeLogin('login-by-phone')">
+        <img src="../../../assets/icons/arrow-left.svg" style="width: 13px; margin-right: 30px;" alt="Arrow left" />
+        Вхід по телефону
+      </span>
+    </div>
+  </div>
+
+  <div class="popup" *ngSwitchCase="'login-by-phone'">
+    <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+    <h3 class="popup__title">увійти</h3>
+    <p class="popup__text">
+      Ще не зареєстровані в TUTEAT?
+      <span class="popup__reg">Реєстрація</span>
+    </p>
+    <div class="login-block__phone">
+      <div class="select">
+        <select name="" id="">
+          <option value="+380" selected>+380</option>
+          <option value="+44" selected>+44</option>
+        </select>
+      </div>
+      <div class="login-block_input phone-input">
+        <input type="text" placeholder="Номер телефону">
+      </div>
+    </div>
+    <div class="popup-footer">
+      <span href="#" class="popul_link login-by-phone" (click)="changeLogin('login-by-services')">
+        Інші варіанти входу <img src="../../../assets/icons/arrow-right.svg" style="width: 13px; margin-left: 30px;"
+          alt="">
+      </span>
+    </div>
+  </div>
+
+  <div class="popup" *ngSwitchCase="'login-by-email'">
+    <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+    <h3 class="popup__title">увійти</h3>
+    <div class="login-block no-flex">
+      <div class="login-block_input">
+        <div class="input-label">Email</div>
+        <div class="input-area">
+          <input type="email" placeholder="Ваша пошта">
+        </div>
+      </div>
+      <div class="login-block_input">
+        <div class="input-label">Пароль</div>
+        <div class="input-area">
+          <input [type]="passwordState" placeholder="Ваш пароль" class="password-input">
+          <img src="../../../assets/icons/eye-close.svg" (click)="toggleShowPassword()" class="eye-close"
+            style="width: 20px;" alt="">
+        </div>
+      </div>
+      <div class="login-block_input">
+        <button class="start-btn">Почати</button>
+      </div>
+    </div>
+    <div class="popup-footer">
+      <span href="#" class="popul_link login-by-phone" (click)="changeLogin('login-by-services')">
+        <img src="../../../assets/icons/arrow-left.svg" style="width: 13px; margin-right: 30px;" alt=""> Всі варінати
+        входу
+      </span>
+    </div>
+  </div>
+
+
+  <div class="popup" *ngSwitchCase="'signup-by-services'">
+    <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+    <h3 class="popup__title">Зареєструватися</h3>
+    <p class="popup__text">
+      Ще не зареєстровані в TUTEAT?
+      <span class="popup__reg" (click)="changeLogin('login-by-services')">Увійти</span>
+    </p>
+    <a href="#" class="popup__link google">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Google.svg" alt="google" />
+      Увійти з Google
+    </a>
+    <a href="#" class="popup__link apple">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Apple.svg" alt="google" />
+      Увійти з Apple
+    </a>
+    <span href="#" class="popup__link email" (click)="changeLogin('signup-by-email')">
+      <img class="popup__link-img" src="../../../assets/icons/sign/Mail.svg" alt="google" />
+      Увійти з Email
+    </span>
+    <div class="popup-footer">
+      <p class="footer-disclaimer">
+        Створюючи обліковий запис в TUTEAT, ви автоматично приймаєте наші <span class="disclaimer-selected">Умови
+          обслуговування, Політику
+          конфіденційності і Політика використання файлів cookie</span>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="popup" *ngSwitchCase="'signup-by-email'">
+    <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+    <h3 class="popup__title">Зареєструватися</h3>
+    <div class="signup-block">
+      <div class="login-block_input">
+        <div class="input-label">Ім’я</div>
+        <div class="input-area">
+          <input type="email" placeholder="Ім’я">
+        </div>
+      </div>
+      <div class="login-block_input">
+        <div class="input-label">Email</div>
+        <div class="input-area">
+          <input type="email" placeholder="Ваш пошта">
+        </div>
+      </div>
+      <div class="signup-phone">
+        <div class="input-label">Email</div>
+        <div class="login-block__flex">
+          <div class="select-signup">
+            <select name="" id="">
+              <option value="+380" selected>+380</option>
+              <option value="+44" selected>+44</option>
+            </select>
+          </div>
+          <div class="login-block_input phone-input phone-width">
+            <input type="text" placeholder="Номер телефону">
+          </div>
+        </div>
+      </div>
+      <div class="login-block_input">
+        <div class="input-label">Пароль</div>
+        <div class="input-area">
+          <input [type]="passwordState" placeholder="Ваш пароль" class="password-input">
+          <img src="../../../assets/icons/eye-close.svg" (click)="toggleShowPassword()" class="eye-close"
+            style="width: 20px;" alt="">
+        </div>
+        <div class="passoword-errors"></div>
+      </div>
+      <div class="login-block_input">
+        <button class="start-btn">Зареєструватись</button>
+      </div>
+    </div>
+    <div class="popup-footer">
+      <span href="#" class="popul_link login-by-phone" (click)="changeLogin('signup-by-services')">
+        <img src="../../../assets/icons/arrow-left.svg" style="width: 13px; margin-right: 30px;" alt=""> Всі варінати
+        входу
+      </span>
+    </div>
+  </div>
+</div>

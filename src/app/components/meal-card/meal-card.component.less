@@ -1,0 +1,70 @@
+@import "../../../assets/styles/variables";
+
+.meal {
+  max-width: 288px;
+  width: 100%;
+  position: relative;
+}
+
+.meal__img {
+  height: 224px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.meal__restaurant {
+  margin-bottom: 8px;
+  font-size: .875rem;
+  color: @default-9;
+}
+
+.meal__title {
+  font-size: 20px;
+  font-family: "e-Ukr-Medium";
+  text-transform: lowercase;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+
+.meal__descr {
+  font-size: .875rem;
+  margin-bottom: 25px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.meal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meal__price {
+  font-size: 1.25rem;
+}
+
+.meal__btn {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  line-height: 1;
+  font-size: 2.5rem;
+}
+
+.meal__delivery {
+  border-radius: 100px;
+  color: @default-3;
+  padding: 8px 8px 8px 40px;
+  background: @default-10
+  url('../../../assets/icons/delivery-dining.svg') left 8px center/24px no-repeat;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}

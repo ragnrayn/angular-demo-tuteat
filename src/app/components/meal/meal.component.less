@@ -1,0 +1,389 @@
+@import "../../../assets/styles/variables";
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  position: relative;
+  padding-bottom: 62px;
+}
+
+.card-dislike,
+.card-like {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  font-size: 5.2rem;
+  outline: none;
+}
+
+.card {
+  max-width: 896px;
+  width: 100%;
+  min-height: 520px;
+  position: relative;
+  perspective: 1800px;
+  &.flip {
+    .card__front {
+      transform: rotateY(180deg);
+    }
+    .card__back {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+.card__front,
+.card__back {
+  box-shadow: 0px 4px 60px rgba(35, 38, 79, 0.1);
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s all;
+  backface-visibility: hidden;
+  display: flex;
+}
+
+.card__front {
+  background: @default-3;
+}
+
+.card__img {
+  width: 46.4%;
+  height: inherit;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card__inner {
+  padding: 32px 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.card-flip {
+  width: 65px;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background: transparent;
+  outline: none;
+}
+
+.card__head {
+  margin-bottom: 24px;
+}
+
+.card__delivery-list {
+  display: flex;
+  gap: 26px;
+}
+
+.card__delivery-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  span:first-child {
+    font-size: 1.5rem;
+  }
+  span.icon-delivery-bike {
+    font-size: 1.75em;
+  }
+}
+
+.card__title {
+  font-size: 2rem;
+  text-transform: none;
+  font-family: "e-Ukr-Regular";
+  margin-bottom: 8px;
+}
+
+.card__descr {
+  margin-bottom: 24px;
+}
+
+.card__price {
+  font-size: 1.875rem;
+  color: @purple-80;
+  font-family: "e-Ukr-Medium";
+}
+
+.card__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__info-list {
+  display: flex;
+  gap: 8px;
+}
+
+.card__info-item {
+  padding: 6px 10px;
+  background: @purple-10;
+  border-radius: 100px;
+  color: @purple-80;
+}
+
+.card__back {
+  background: @default-3;
+  transform: rotateY(180deg);
+  padding: 32px;
+  justify-content: space-between;
+  .card__title {
+    margin: 5px 0 16px;
+  }
+}
+
+.card__options {
+  width: 58.3%;
+  overflow-y: scroll;
+  visibility: hidden;
+  padding-right: 50px;
+  &.visible {
+    visibility: visible;
+  }
+}
+
+.card__options-title {
+  font-size: 1rem;
+  text-transform: none;
+  font-family: "e-Ukr-Regular";
+  margin-top: 40px;
+  &.margin-none {
+    margin: 0;
+  }
+}
+
+.card__options-group {
+  padding: 24px 0 8px;
+  border-bottom: 1px solid @default-4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__options-inner {
+  display: flex;
+  gap: 24px;
+  font-size: 0.875rem;
+}
+
+.card__options-price {
+  color: @purple-80;
+}
+
+.card__options-checbox {
+  display: none;
+  &:checked + .card__options-label {
+    background: @purple-80 url(../../../assets/icons/card/check.svg) center center/12px
+    no-repeat;
+  }
+}
+
+.card__options-label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: @purple-10 url(../../../assets/icons/card/plus.svg) center center/16px
+  no-repeat;
+  cursor: pointer;
+}
+
+.card__options-allergens {
+  font-size: 0.875rem;
+  color: @purple-main;
+  margin-top: 8px;
+}
+
+.card__allergens-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.card__input-group {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  [type="checkbox"] {
+    display: none;
+    &:checked + span {
+      border: 2px solid @orange-light;
+      &::before {
+        display: block;
+      }
+    }
+  }
+  span {
+    width: 24px;
+    height: 24px;
+    border: 2px solid @default-10;
+    border-radius: 3px;
+    position: absolute;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 2px;
+      border-radius: 16px;
+      background: @orange-light;
+      display: none;
+    }
+  }
+  label {
+    cursor: pointer;
+    padding-left: 32px;
+    position: relative;
+  }
+}
+
+.card__final {
+  width: 41.5%;
+  padding-left: 40px;
+  border-left: 2px solid @purple-20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card__final-text {
+  color: @orange;
+  font-size: 0.875rem;
+  max-width: 230px;
+  line-height: 1.7;
+}
+
+.card__final-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card__final-less,
+.card__final-more {
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+}
+
+.card__final-less {
+  background: @default-4 url(../../../assets/icons/card/minus.svg) center
+    center/16px no-repeat;
+}
+
+.card__final-more {
+  background: @purple-20 url(../../../assets/icons/card/plus.svg) center center/16px
+  no-repeat;
+}
+
+.card__final-amount {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1200px) {
+  .card-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .card {
+    order: -1;
+    margin-bottom: 60px;
+  }
+
+  .card-flip {
+    bottom: 150px;
+  }
+}
+
+@media (max-width: 960px) {
+  .card__options {
+    width: 49.8%;
+  }
+  .card__final {
+    width: 50%;
+  }
+}
+
+@media (max-width: 780px) {
+  .card {
+    min-height: 560px;
+  }
+
+  .card__front,
+  .card__back {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card__inner {
+    padding: 24px;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__img {
+    width: 100%;
+    height: 59vw;
+  }
+
+  .card__options,
+  .card__final {
+    width: 100%;
+  }
+
+  .card__final {
+    border: none;
+    padding: 0;
+  }
+
+  .card__back {
+    padding: 24px 5px 24px 24px;
+  }
+
+  .card__options {
+    padding-right: 14px;
+    margin-bottom: 26px;
+    max-height: 256px;
+  }
+
+  .card__descr {
+    max-width: 280px;
+  }
+
+  .card-dislike,
+  .card-like {
+    font-size: 2.5rem;
+  }
+}

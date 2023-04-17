@@ -1,0 +1,194 @@
+<div class="card-wrapper">
+  <button class="card-dislike">
+    <span class="icon-card-dislike"></span>
+  </button>
+  <div class="card">
+    <div class="card__front">
+      <img class="card__img" src="../../../assets/images/card/card.jpg" alt="meal" />
+      <div class="card__inner">
+        <div>
+          <div class="card__head">
+            <ul class="card__delivery-list">
+              <li
+                class="card__delivery-item card__delivery-item--rating"
+              >
+                <span class="icon-star"></span>
+                <span class="card__delivery-item-text">4.5</span>
+              </li>
+              <li
+                class="card__delivery-item card__delivery-item--price"
+              >
+                <span class="icon-delivery-bike"></span>
+                <span class="card__delivery-item-text">50₴</span>
+              </li>
+              <li
+                class="card__delivery-item card__delivery-item--time"
+              >
+                          <span class="icon-time"
+                          ><span class="path1"></span
+                          ><span class="path2"></span
+                          ></span>
+                <span class="card__delivery-item-text">30 хв.</span>
+              </li>
+            </ul>
+          </div>
+          <h3 class="card__title">Ягідні сирники карамелізовані</h3>
+          <p class="card__descr">
+            Сир, чорниця, манна крупа, цукор, ваніль
+          </p>
+          <p class="card__price">110₴</p>
+        </div>
+        <div class="card__footer">
+          <p class="card__restaurant">Ресторан</p>
+          <ul class="card__info-list">
+            <li class="card__info-item">250 г.</li>
+            <li class="card__info-item">133 ккал</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card__back">
+      <div class="card__options">
+        <h4 class="card__options-title margin-none">
+          Додати інгредієнти
+        </h4>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Горіхи</p>
+            <p class="card__options-price">(+30₴)</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="nuts"
+            id="card-nuts"
+          />
+          <label class="card__options-label" for="card-nuts"></label>
+        </div>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Шоколад</p>
+            <p class="card__options-price">(+20₴)</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="сhocolate"
+            id="card-сhocolate"
+          />
+          <label
+            class="card__options-label"
+            for="card-сhocolate"
+          ></label>
+        </div>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Полуниця</p>
+            <p class="card__options-price">(+40₴)</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="strawberry"
+            id="card-strawberry"
+          />
+          <label
+            class="card__options-label"
+            for="card-strawberry"
+          ></label>
+        </div>
+        <h4 class="card__options-title">Видалити інгредієнти</h4>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Без чорниці</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="without-blueberries"
+            id="card-blueberries"
+          />
+          <label
+            class="card__options-label"
+            for="card-blueberries"
+          ></label>
+        </div>
+        <h4 class="card__options-title">Додати соус</h4>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Вишневий джем</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="cherry-jam"
+            id="card-cherry-jam"
+          />
+          <label
+            class="card__options-label"
+            for="card-cherry-jam"
+          ></label>
+        </div>
+        <div class="card__options-group">
+          <div class="card__options-inner">
+            <p class="card__options-name">Сметанна</p>
+          </div>
+          <input
+            class="card__options-checbox"
+            type="checkbox"
+            name="sour-cream"
+            id="card-sour-cream"
+          />
+          <label
+            class="card__options-label"
+            for="card-sour-cream"
+          ></label>
+        </div>
+        <h4 class="card__options-title">Алергени</h4>
+        <p class="card__options-allergens">Злаки, лактоза, яйця</p>
+        <div class="card__allergens-wrapper">
+          <div class="card__input-group">
+            <input
+              type="checkbox"
+              name="allergens-nuts"
+              id="allergens-nuts"
+            />
+            <span></span>
+            <label for="allergens-nuts">Горіхи</label>
+          </div>
+          <div class="card__input-group">
+            <input
+              type="checkbox"
+              name="allergens-сhocolate"
+              id="allergens-сhocolate"
+            />
+            <span></span>
+            <label for="allergens-сhocolate">Шоколад</label>
+          </div>
+        </div>
+      </div>
+      <div class="card__final">
+        <div>
+          <h3 class="card__title">Ягідні сирники карамелізовані</h3>
+          <p class="card__final-text">
+            Додати шоколад (+20₴), видалити чорниці, горіхи
+          </p>
+        </div>
+        <div class="card__final-footer">
+          <div class="card__final-inner">
+            <button class="card__final-less"></button>
+            <span class="card__final-amount">1</span>
+            <button class="card__final-more"></button>
+          </div>
+          <p class="card__final-order">замовити 1 за 130₴</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="card-like">
+    <span class="icon-card-like"></span>
+  </button>
+  <div class="card-flip">
+    <span class="icon-flip"></span>
+  </div>
+</div>

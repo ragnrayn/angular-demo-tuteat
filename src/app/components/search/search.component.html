@@ -1,0 +1,51 @@
+<div class="promo__search-wrapper">
+      <div class="search-box">
+        <picture>
+          <source
+            media="(min-width: 1441px)"
+            srcset="../../../assets/icons/steps.svg"/>
+          <source
+            media="(min-width: 1024px)"
+            srcset="../../../assets/icons/steps-middle.svg"
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset="../../../assets/icons/steps-tablet.svg"
+          />
+          <img class="search-box__steps" src="" alt=""/>
+        </picture>
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="../../../assets/icons/logo-tuteat-big-mobile.svg"
+          />
+          <img
+            class="logo logo--big"
+            src="../../../assets/icons/logo-tuteat-big.svg"
+            alt="logotype tuteat"
+            width="384"
+          />
+        </picture>
+        <div class="search-form">
+          <div class="search-form__group">
+            <input
+              type="text"
+              placeholder="Вкажіть вашу адресу"
+              class="search-form__input"
+              (input)="getNameOfLocation($event)"
+            />
+            <span class="search-form__icon icon-location" (click)="getCurrentCoords(); toggleLoader()"></span>
+            <div class="loader">
+              <img src="../../../assets/images/loader-transparent.gif" class="loader-gif" alt="">
+            </div>
+            <span class="search-form__close icon-close"></span>
+            <ul class="search-form__list" [ngClass]="possibleStreets.results ? 'active' : ''">
+              <li class="search-form__item" *ngFor="let address of possibleStreets.results" (click)="getLocationFromList($event)">
+                <span>{{ address.formatted_address }}</span>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn--dark" (click)="getMeal.emit()">Шукати</button>
+        </div>
+      </div>
+    </div>

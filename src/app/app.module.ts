@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
+import { InformationComponent } from './components/information/information.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { PaymentsComponent } from './components/payments/payments.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { HomeComponent } from './pages/home/home.component';
     PromoDescriptionComponent,
     MealComponent,
     ModalComponent,
-    HomeComponent
+    HomeComponent,
+    InformationComponent,
+    OrdersComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,7 @@ import { HomeComponent } from './pages/home/home.component';
     HttpClientModule,
     CommonModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })

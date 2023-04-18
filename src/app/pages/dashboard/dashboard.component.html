@@ -5,14 +5,43 @@
             <div class="tabs">
                 <ul>
                     <li>
-                        <a href="#">
-                            <svg width="32" height="32" class="tabs-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <a routerLink='information' routerLinkActive="active">
+                            <svg width="32" height="32" class="tabs-icon" viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="16" cy="12" r="6" />
                                 <path
                                     d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
                                     stroke-width="3" stroke-linecap="round" />
                             </svg>
                             Тут інформація
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="orders" routerLinkActive="active">
+                            <svg width="26" height="30" class="tabs-icon" viewBox="0 0 26 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.761719" width="26" height="28.4762" rx="2" />
+                                <path d="M5.57129 22.4282H20.4284" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M9.28564 18.7139H16.7142" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M5.57129 11.9048H20.4284" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path
+                                    d="M19.1905 11.9043C19.1905 8.48544 16.419 5.71387 13 5.71387C9.58114 5.71387 6.80957 8.48544 6.80957 11.9043"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            Тут замовлення
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="payments" routerLinkActive="active">
+                            <svg width="28" height="18" class="tabs-icon" viewBox="0 0 28 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" width="27" height="18" rx="2" />
+                                <rect y="3" width="28" height="3" fill="white" />
+                            </svg>
+                            Тут спопсоби оплати
                         </a>
                     </li>
                 </ul>
@@ -23,6 +52,6 @@
         </div>
     </div>
     <div class="office-content">
-        Content
+        <router-outlet></router-outlet>
     </div>
 </div>

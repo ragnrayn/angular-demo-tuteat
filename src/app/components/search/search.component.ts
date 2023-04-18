@@ -38,10 +38,13 @@ export class SearchComponent {
 
   getNameOfLocation($event: any) {
     let geocoder = new google.maps.Geocoder();
-    console.log($event.target.value)
-    geocoder.geocode({ 'address': $event.target.value})
+    if($event.target.value){
+      geocoder.geocode({ 'address': $event.target.value, 'componentRestrictions': { country: "UA" }})
       .then(result => this.possibleStreets = result)
       .catch(err => this.possibleStreets = "")
+    }else{
+      this.possibleStreets = [];
+    }
   }
 
   getLocationFromList($event: any){

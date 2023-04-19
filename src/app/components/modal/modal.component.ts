@@ -1,14 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.less']
+  styleUrls: ['./modal.component.less'],
 })
 export class ModalComponent {
   @Output() closeModal = new EventEmitter()
 
-  switchPopupValue: string = "login-by-services";
+  switchPopupValue: string = "login-by-phone";
   passwordState: string = "password";
   passwordStateBool: boolean = true;
 

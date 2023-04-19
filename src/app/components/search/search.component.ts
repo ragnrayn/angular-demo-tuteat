@@ -37,13 +37,13 @@ export class SearchComponent {
   }
 
   getNameOfLocation($event: any) {
-    let geocoder = new google.maps.Geocoder();
-    if($event.target.value){
-      geocoder.geocode({ 'address': $event.target.value, 'componentRestrictions': { country: "UA" }})
-      .then(result => this.possibleStreets = result)
-      .catch(err => this.possibleStreets = "")
-    }else{
-      this.possibleStreets = [];
+    let places = new google.maps.places.Autocomplete($event.target, { 'componentRestrictions': { country: "UA" }, types: ['address'] });
+    let place: any;
+    if(places){
+      document.querySelector(".pac-container")?.classList.add("pac-active")
+      places.addListener("place_changed", () => {
+        place = places.getPlace();
+      })
     }
   }
 

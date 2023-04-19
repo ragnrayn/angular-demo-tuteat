@@ -25,10 +25,12 @@
   min-height: 520px;
   position: relative;
   perspective: 1800px;
+
   &.flip {
     .card__front {
       transform: rotateY(180deg);
     }
+
     .card__back {
       transform: rotateY(360deg);
     }
@@ -96,9 +98,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
   span:first-child {
     font-size: 1.5rem;
   }
+
   span.icon-delivery-bike {
     font-size: 1.75em;
   }
@@ -145,6 +149,7 @@
   transform: rotateY(180deg);
   padding: 32px;
   justify-content: space-between;
+
   .card__title {
     margin: 5px 0 16px;
   }
@@ -155,6 +160,7 @@
   overflow-y: scroll;
   visibility: hidden;
   padding-right: 50px;
+
   &.visible {
     visibility: visible;
   }
@@ -165,6 +171,7 @@
   text-transform: none;
   font-family: "e-Ukr-Regular";
   margin-top: 40px;
+
   &.margin-none {
     margin: 0;
   }
@@ -190,9 +197,9 @@
 
 .card__options-checbox {
   display: none;
-  &:checked + .card__options-label {
-    background: @purple-80 url(../../../assets/icons/card/check.svg) center center/12px
-    no-repeat;
+
+  &:checked+.card__options-label {
+    background: @purple-80 url(../../../assets/icons/card/check.svg) center center/12px no-repeat;
   }
 }
 
@@ -200,8 +207,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: @purple-10 url(../../../assets/icons/card/plus.svg) center center/16px
-  no-repeat;
+  background: @purple-10 url(../../../assets/icons/card/plus.svg) center center/16px no-repeat;
   cursor: pointer;
 }
 
@@ -226,21 +232,26 @@
   cursor: pointer;
   outline: none;
   position: relative;
+
   [type="checkbox"] {
     display: none;
-    &:checked + span {
+
+    &:checked+span {
       border: 2px solid @orange-light;
+
       &::before {
         display: block;
       }
     }
   }
+
   span {
     width: 24px;
     height: 24px;
     border: 2px solid @default-10;
     border-radius: 3px;
     position: absolute;
+
     &::before {
       content: "";
       position: absolute;
@@ -254,6 +265,7 @@
       display: none;
     }
   }
+
   label {
     cursor: pointer;
     padding-left: 32px;
@@ -296,13 +308,11 @@
 }
 
 .card__final-less {
-  background: @default-4 url(../../../assets/icons/card/minus.svg) center
-    center/16px no-repeat;
+  background: @default-4 url(../../../assets/icons/card/minus.svg) center center/16px no-repeat;
 }
 
 .card__final-more {
-  background: @purple-20 url(../../../assets/icons/card/plus.svg) center center/16px
-  no-repeat;
+  background: @purple-20 url(../../../assets/icons/card/plus.svg) center center/16px no-repeat;
 }
 
 .card__final-amount {
@@ -323,7 +333,7 @@
   }
 
   .card-flip {
-    bottom: 150px;
+    bottom: 130px;
   }
 }
 
@@ -331,14 +341,55 @@
   .card__options {
     width: 49.8%;
   }
+
   .card__final {
     width: 50%;
+  }
+
+  .card-flip {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .card-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .card-flip {
+    bottom: 209px;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .card-flip {
+    bottom: 150px;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .card-flip {
+    bottom: 150px;
+    right: unset;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .card-flip{
+    bottom: 120px;
   }
 }
 
 @media (max-width: 780px) {
   .card {
-    min-height: 560px;
+    min-height: 610px;
+    margin-bottom: 110px;
   }
 
   .card__front,
@@ -387,5 +438,29 @@
   .card-dislike,
   .card-like {
     font-size: 2.5rem;
+  }
+
+  .buttons-card {
+    padding: 50px 0;
+  }
+
+  .card-flip {
+    padding: 50px 0;
+  }
+
+  .card-like,
+  .card-dislike {
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+}
+
+
+@media screen and (max-width: 530px) {
+
+  .card-like,
+  .card-dislike {
+    padding-top: 0 !important;
   }
 }

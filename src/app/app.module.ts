@@ -1,4 +1,4 @@
-import { ModuleWithProviders, NgModule, Provider, Type } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule, Provider, Type } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { InformationComponent } from './components/information/information.compo
 import { OrdersComponent } from './components/orders/orders.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MealCardComponent,
     PromoDescriptionComponent,
     MealComponent,
-    ModalComponent,
     HomeComponent,
     InformationComponent,
     OrdersComponent,
-    PaymentsComponent
+    PaymentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +36,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     CommonModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HeaderComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}
 

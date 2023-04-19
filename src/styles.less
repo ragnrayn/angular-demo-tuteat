@@ -566,3 +566,56 @@ textarea {
   background: @purple-40;
   border-radius: 32px;
 }
+
+.pac-container{
+  background: @default-3;
+  width: 100%;
+  padding: 40px 24px 0 24px;
+  border-radius: 0px 0px 30px 30px;
+  margin-top: -35px;
+  overflow: hidden;
+  z-index: 1 !important;
+  height: 0;
+  box-shadow: none;
+}
+
+.pac-active{
+  animation: appearList 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.pac-item{
+  border: 0;
+  cursor: pointer;
+}
+
+.pac-container::after{
+  display: none;
+}
+
+
+@keyframes appearList {
+  from{ height: 0; }
+  to{ height: 320px; }
+}
+
+@keyframes closeList {
+  from{ height: 320px; }
+  to{ height: 0; }
+}
+
+
+.pac-icon{
+  display: none;
+}
+
+.pac-item{
+  padding: 10px 10px;
+  font-size: 18px;
+  color: @default-6;
+}
+
+
+.pac-matched{
+  font-weight: normal;
+}

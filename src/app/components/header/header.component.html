@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="/" class="header__inner">
+                <p class="caption">Щоб їсти GOOD</p>
+                <p class="slogan">тицяй TUT</p>
+            </a>
+            <div class="address-login_block">
+                <p class="address" *ngIf="addressData"><img src="assets/icons/location-icon.svg"
+                        style="width: 25px; margin-right: 15px;" />{{ addressData }}</p>
+                <button class="btn start" (click)="isModalOpened=true">Почати</button>
+            </div>
+            <div class="burger">
+                <a href="#">
+                    <img src="assets/icons/user-icon.svg" style="width: 60px;" alt="">
+                </a>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<app-modal *ngIf="isModalOpened" (closeModal)="isModalOpened=false">
+</app-modal>

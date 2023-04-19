@@ -1,6 +1,10 @@
 @import "../../../assets/styles/variables.less";
 
-input{
+.information {
+    width: 100%;
+}
+
+input {
     width: 100%;
     max-width: 364px;
     padding: 16px 0 16px 24px;
@@ -8,11 +12,71 @@ input{
     border: 1px solid @default-6;
 }
 
-.field-row{
+.field-row {
     display: flex;
 }
 
-.filed:first-child{margin-left: 0;}
-.field{margin-left: 53px;}
-.title{ margin-bottom: 40px;}
-.field-title{margin-bottom: 8px;}
+.field:first-child {
+    margin-left: 0;
+}
+
+.field {
+    width: 100%;
+    max-width: 364px;
+    margin-left: 53px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.field-title {
+    margin-bottom: 8px;
+}
+
+select {
+    appearance: none;
+    background-color: #E9EBFF;
+    border: none;
+    border-radius: 16px;
+    padding: 0 1em 0 0;
+    margin: 0;
+    color: @default-10;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: inherit;
+    line-height: inherit;
+    padding: 16px 46px 16px 16px;
+}
+
+.select::after {
+    content: "";
+    width: 16px;
+    height: 10px;
+    background-image: url("../../../assets/icons/arrow-down.svg");
+    display: inline-block;
+    position: relative;
+    left: 60%;
+    top: -50%;
+    pointer-events: none;
+}
+
+.select-signup {
+    display: flex;
+}
+
+.select-signup .phone-input {
+    margin-left: 20px;
+}
+
+.input-area {
+    position: relative;
+}
+
+
+.eye-close {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+}

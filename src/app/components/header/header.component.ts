@@ -27,7 +27,12 @@ export class HeaderComponent implements OnInit {
   }
 
   mobileStyling(value: boolean): void {
+    let token = localStorage.getItem('token');
     this.menuStyling.emit(value);
+    if(token){
+      return;
+    }
+    this.isModalOpened = true;
   }
 
   routeToDashboard(): void {

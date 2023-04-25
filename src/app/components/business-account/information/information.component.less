@@ -1,0 +1,124 @@
+@import "../../../../assets/styles/variables.less";
+
+.information {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    max-width: 364px;
+    padding: 16px 0 16px 24px;
+    border-radius: 16px;
+    border: 1px solid @default-6;
+}
+
+.field:first-child {
+    margin-left: 0;
+}
+
+.field {
+    width: 100%;
+    max-width: 364px;
+    margin-top: 40px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.field-title {
+    margin-bottom: 8px;
+}
+
+select {
+    appearance: none;
+    background-color: #E9EBFF;
+    border: none;
+    border-radius: 16px;
+    padding: 0 1em 0 0;
+    margin: 0;
+    color: @default-10;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: inherit;
+    line-height: inherit;
+    padding: 16px 46px 16px 16px;
+}
+
+.select::after {
+    content: "";
+    width: 16px;
+    height: 10px;
+    background-image: url("../../../../assets/icons/arrow-down.svg");
+    display: inline-block;
+    position: relative;
+    left: 60%;
+    top: -50%;
+    pointer-events: none;
+}
+
+.select-signup {
+    display: flex;
+}
+
+.select-signup .phone-input {
+    margin-left: 20px;
+}
+
+.input-area {
+    position: relative;
+}
+
+
+.eye-close {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.delete-account button{
+    background-color: transparent;
+    border: 0;
+    color: #D25236;
+}
+
+@media screen and (max-width: 1040px) {
+    .field-row{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .field{
+        margin-left: unset !important;
+        margin-top: 20px;
+    }
+
+    .delete-account{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .field-row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field{
+        margin-left: unset !important;
+        margin-top: 20px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .information{
+        align-items: start;
+    }
+}

@@ -1,0 +1,13 @@
+<div class="business">
+    <div class="business-logo">
+        <a href="#">
+            <img src="../../../assets/icons/logo-tuteat-big.svg" alt="">
+        </a>
+    </div>
+    <div class="business-btns">
+        <button class="signin-btn" (click)="isModalOpened=true">Увійти</button>
+        <button class="signup-btn" (click)="changeToEmail(); isModalOpened=true">Зареєструватися</button>
+    </div>
+</div>
+<app-footer></app-footer>
+<app-modal *ngIf="isModalOpened" (closeModal)="isModalOpened=false" [signup]="signupEmail"></app-modal>

@@ -17,6 +17,18 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { OrdersModalComponent } from './components/orders-modal/orders-modal.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BusinessAccountComponent } from './pages/business-account/business-account.component';
+import { RestourantComponent } from './components/business-account/restourant/restourant.component';
+import { IntegrationComponent } from './components/business-account/integration/integration.component';
+import { MenuComponent } from './components/business-account/menu/menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { CardModalComponent } from './components/card-modal/card-modal.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +41,12 @@ import { HeaderComponent } from './components/header/header.component';
     InformationComponent,
     OrdersComponent,
     PaymentsComponent,
+    OrdersModalComponent,
+    BusinessAccountComponent,
+    RestourantComponent,
+    IntegrationComponent,
+    MenuComponent,
+    CardModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +55,10 @@ import { HeaderComponent } from './components/header/header.component';
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

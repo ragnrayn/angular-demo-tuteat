@@ -1,1 +1,18 @@
-<p>payments works!</p>
+<div class="payment" *ngIf="isShowCards">
+    <div class="title">Способи оплати</div>
+    <div class="payment-list">
+        <ul class="card-list">
+            <li class="card" *ngFor="let card of allCards"><img src="assets/icons/card.svg" alt="Credit card" class="card-svg">**** {{ card.card_number.split(" ").at(-1) }} <input type="radio" name="card"></li>
+        </ul>
+        <div class="add-card">
+            Додати банківську карту
+            <div class="add-card-btn" (click)="routeToAddCard()">
+                <input class="card__options-checbox" type="checkbox" name="nuts" id="card-nuts" />
+                <label class="card__options-label" for="card-nuts"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="add-payment">
+    <router-outlet></router-outlet>
+</div>

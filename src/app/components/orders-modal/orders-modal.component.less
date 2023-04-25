@@ -1,0 +1,151 @@
+@import "../../../assets/styles/variables";
+
+.overlay-popup {
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000081;
+
+    &.active {
+        display: block;
+    }
+}
+
+.scroll-hidden{
+    overflow: hidden;
+}
+
+.popup {
+    max-width: 468px;
+    width: 100%;
+    height: 500px;
+    max-height: 712px;
+    background: @default-3;
+    padding: 55px 20px;
+    border-radius: 20px;
+    overflow-x: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    &.active {
+        display: block;
+    }
+}
+
+.popup__close {
+    font-size: 23px;
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.title{
+    color: @default-10;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.restourant-status{margin-bottom: 20px;}
+
+.restourant-status, .restourant-address{display: flex;}
+
+.restourant-address div, .restourant-status div{
+    display: flex;
+    flex-basis: 200px;
+}
+
+.restourant-title{
+    color: #7D88F2;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.title-value{
+    color: #A1A2B4;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.item:first-child{margin-top: 0;}
+.item{margin-top: 50px;}
+
+.list-item:first-child{margin-top: 0;}
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    color: @default-10;
+    margin-top: 16px;
+}
+
+.list-item__name{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.list-item__name span{
+    margin-right: 5px;
+}
+
+.list-item__price{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.old-price{
+    margin-right: 15px;
+    color: @default-6;
+}
+
+.price-red{color: red;}
+
+
+.line{
+    width: 100%;
+    height: 2px;
+    margin: 25px auto;
+    background: #D1D5FF;
+}
+
+.summary-price{
+    color: @default-10;
+    font-size: 16px;
+}
+
+.card-number{
+    color: @default-6;
+    margin-top: 10px;
+}
+
+.popup-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.repeat-btn{
+    padding: 16px 24px;
+    background: #6570E3;
+    color: @default-3;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
+    border-radius: 200px;
+}
+
+.help-btn{
+    border: 2px solid #6570E3;
+    color: #6570E3;
+    border-radius: 200px;
+    background: transparent;
+    padding: 16px 24px;
+    margin-left: 50px;
+}

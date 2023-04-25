@@ -58,19 +58,19 @@
       <div class="login-block_input">
         <div class="input-label">Email</div>
         <div class="input-area">
-          <input type="email" placeholder="Ваша пошта">
+          <input type="email" [(ngModel)]="signInData.email" placeholder="Ваша пошта">
         </div>
       </div>
       <div class="login-block_input">
         <div class="input-label">Пароль</div>
         <div class="input-area">
-          <input [type]="passwordState" placeholder="Ваш пароль" class="password-input">
+          <input [type]="passwordState" [(ngModel)]="signInData.password" placeholder="Ваш пароль" class="password-input">
           <img src="assets/icons/eye-close.svg" (click)="toggleShowPassword()" class="eye-close" style="width: 20px;"
             alt="">
         </div>
       </div>
       <div class="login-block_input">
-        <button class="start-btn">Почати</button>
+        <button class="start-btn" (click)="signIn()">Почати</button>
       </div>
     </div>
     <div class="popup-footer">
@@ -91,15 +91,15 @@
     </p>
     <a href="#" class="popup__link google">
       <img class="popup__link-img" src="assets/icons/sign/Google.svg" alt="google" />
-      Увійти з Google
+      Реєстрація з Google
     </a>
     <a href="#" class="popup__link apple">
       <img class="popup__link-img" src="assets/icons/sign/Apple.svg" alt="google" />
-      Увійти з Apple
+      Реєстрація з Apple
     </a>
     <span href="#" class="popup__link email" (click)="changeLogin('signup-by-email')">
       <img class="popup__link-img" src="assets/icons/sign/Mail.svg" alt="google" />
-      Увійти з Email
+      Реєстрація з Email
     </span>
     <div class="popup-footer">
       <p class="footer-disclaimer">
@@ -118,40 +118,40 @@
       <div class="login-block_input">
         <div class="input-label">Ім’я</div>
         <div class="input-area">
-          <input type="email" placeholder="Ім’я">
+          <input type="email" [(ngModel)]="registerData.name" placeholder="Ім’я">
         </div>
       </div>
       <div class="login-block_input">
         <div class="input-label">Email</div>
         <div class="input-area">
-          <input type="email" placeholder="Ваш пошта">
+          <input type="email" [(ngModel)]="registerData.email" placeholder="Ваш пошта">
         </div>
       </div>
       <div class="signup-phone">
         <div class="input-label">Email</div>
         <div class="login-block__flex">
           <div class="select-signup">
-            <select name="" id="">
+            <select name="" id="" [(ngModel)]="phoneStart">
               <option value="+380" selected>+380</option>
-              <option value="+44" selected>+44</option>
+              <option value="+44">+44</option>
             </select>
           </div>
           <div class="login-block_input phone-input phone-width">
-            <input type="text" placeholder="Номер телефону">
+            <input type="text" [(ngModel)]="phoneEnd" placeholder="Номер телефону">
           </div>
         </div>
       </div>
       <div class="login-block_input">
         <div class="input-label">Пароль</div>
         <div class="input-area">
-          <input [type]="passwordState" placeholder="Ваш пароль" class="password-input">
+          <input [type]="passwordState" [(ngModel)]="registerData.password" placeholder="Ваш пароль" class="password-input">
           <img src="assets/icons/eye-close.svg" (click)="toggleShowPassword()" class="eye-close" style="width: 20px;"
             alt="">
         </div>
         <div class="passoword-errors"></div>
       </div>
       <div class="login-block_input">
-        <button class="start-btn">Зареєструватись</button>
+        <button class="start-btn" (click)="registerNewUser()">Зареєструватись</button>
       </div>
     </div>
     <div class="popup-footer">

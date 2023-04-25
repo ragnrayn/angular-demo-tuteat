@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header (menuStyling)="mobileStyling($event)"></app-header>
 <div class="office">
-    <div class="office-tabs">
+    <div class="office-tabs" [ngClass]="isOpen ? 'open' : ''">
         <div class="office-top">
             <div class="office-user">Привіт, Юля</div>
             <div class="tabs">
@@ -42,13 +42,13 @@
                                 <rect x="1" width="27" height="18" rx="2" />
                                 <rect y="3" width="28" height="3" fill="white" />
                             </svg>
-                            Тут спопсоби оплати
+                            Тут способи оплати
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="account-exit">
+        <div class="account-exit" (click)="exitFromAccount()">
             Вийти
         </div>
     </div>
@@ -56,3 +56,4 @@
         <router-outlet></router-outlet>
     </div>
 </div>
+<app-footer></app-footer>

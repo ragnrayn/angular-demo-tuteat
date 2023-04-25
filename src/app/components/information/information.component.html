@@ -1,11 +1,12 @@
 <div class="information">
-    <div class="title">Інформація</div>
+    <div>
+        <div class="title">Інформація</div>
     <div class="information-fields">
         <div class="field-row">
             <div class="field">
                 <div class="field-title">Ім’я</div>
                 <div class="field-input">
-                    <input type="text" value="Юля">
+                    <input type="text" [value]="userData.name">
                 </div>
             </div>
             <div class="field">
@@ -29,17 +30,21 @@
             <div class="field">
                 <div class="field-title">E-mail</div>
                 <div class="field-input">
-                    <input type="email" value="email@gmail.com">
+                    <input type="email" [value]="userData.email">
                 </div>
             </div>
             <div class="field">
                 <div class="field-title">Пароль</div>
                 <div class="input-area">
-                    <input [type]="passwordState" placeholder="Ваш пароль" class="password-input">
+                    <input [type]="passwordState" placeholder="Ваш пароль" [value]="userData.password" class="password-input">
                     <img src="assets/icons/eye-close.svg" (click)="toggleShowPassword()" class="eye-close"
                         style="width: 20px;" alt="">
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    <div class="delete-account">
+        <button (click)="deleteAccount()">Видалити акаунт</button>
     </div>
 </div>

@@ -1,0 +1,56 @@
+<div class="overlay-popup">
+    <div class="popup">
+        <span class="popup__close icon-close" (click)="closeModal.emit()"></span>
+        <div class="restourant item">
+            <div class="title">Ресторан</div>
+            <div class="restourant-status">
+                <div class="restourant-title">Доставлено</div>
+                <div class="title-value">05 квітня 2023 21:00</div>
+            </div>
+            <div class="restourant-address">
+                <div class="restourant-title">За адресою</div>
+                <div class="title-value">вул. Перемоги 25/1 кв. 7, поверх 3 (підїзд 2)</div>
+            </div>
+        </div>
+        <div class="order item">
+            <div class="title">Ваше замовлення #250JD</div>
+            <div class="order-list">
+                <div class="list-item">
+                    <div class="list-item__name"><span class="list-item__count">1 x</span>Ягідні сирники</div>
+                    <div class="list-item__price">110₴</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item__name"><span class="list-item__count">1 x</span>Сік</div>
+                    <div class="list-item__price price-red"><span class="old-price"><s>50₴</s></span>30₴</div>
+                </div>
+            </div>
+        </div>
+        <div class="summary item">
+            <div class="title">Всього</div>
+            <div class="summary-list">
+                <div class="list-item">
+                    <div class="list-item__name">Замовлення</div>
+                    <div class="list-item__price">110₴</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item__name">Доставка</div>
+                    <div class="list-item__price">35₴</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="summary-price">
+                <div class="list-item">
+                    <div class="summary__name">Замовлення</div>
+                    <div class="summary__price">175₴</div>
+                </div>
+                <div class="card-number">
+                    *оплата з карти, що закінчується на 9595
+                </div>
+            </div>
+        </div>
+        <div class="popup-btns">
+            <button class="repeat-btn">Повторити</button>
+            <button class="help-btn">Допомога</button>
+        </div>
+    </div>
+</div>

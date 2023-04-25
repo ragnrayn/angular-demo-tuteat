@@ -1,1 +1,55 @@
-<p>orders works!</p>
+<div class="orders">
+    <div class="title">
+        Замовлення
+    </div>
+    <div class="order-items">
+        <div class="order-row">
+            <div class="item" (click)="isModalOpened=true">
+                <div class="item-image">
+                    <img src="../../../assets/images/meals/img-1.png" alt="">
+                </div>
+                <div class="item-info">
+                    <div class="item-restourant">Ресторан</div>
+                    <div class="item-meal">Ягідні сирники</div>
+                    <div class="item-price">110₴</div>
+                    <div class="item-date">05 квітня 2023 21:00</div>
+                </div>
+            </div>
+            <div class="item" (click)="isModalOpened=true">
+                <div class="item-image">
+                    <img src="../../../assets/images/meals/img-2.png" alt="">
+                </div>
+                <div class="item-info">
+                    <div class="item-restourant">Ресторан</div>
+                    <div class="item-meal">Cирники</div>
+                    <div class="item-price">80₴</div>
+                    <div class="item-date">25 тавня 2023 15:00</div>
+                </div>
+            </div>
+            <div class="item" (click)="isModalOpened=true">
+                <div class="item-image">
+                    <img src="../../../assets/images/meals/img-3.png" alt="">
+                </div>
+                <div class="item-info">
+                    <div class="item-restourant">Ресторан</div>
+                    <div class="item-meal">Cирники</div>
+                    <div class="item-price">80₴</div>
+                    <div class="item-status">Скасовано</div>
+                </div>
+            </div>
+            <div class="item" (click)="isModalOpened=true">
+                <div class="item-image">
+                    <img src="../../../assets/images/meals/img.png" alt="">
+                </div>
+                <div class="item-info">
+                    <div class="item-restourant">Ресторан</div>
+                    <div class="item-meal">Cирники</div>
+                    <div class="item-price">80₴</div>
+                    <div class="item-status">Скасовано</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-orders-modal *ngIf="isModalOpened" (closeModal)="isModalOpened=false"></app-orders-modal>

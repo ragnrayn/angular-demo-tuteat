@@ -1,0 +1,53 @@
+@import "../../../assets/styles/variables.less";
+
+.title{margin-bottom: 40px;}
+
+.order-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+} 
+
+.item{display: flex; flex-basis: 364px;}
+
+.item-info{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+.item-restourant{color: #7D88F2;}
+
+.item-meal{
+    font-weight: 500;
+    color: @default-10;
+}
+
+.item-price{
+    color: @default-10;
+    font-weight: 500;
+}
+
+.item-date{
+    color: @default-6;
+    font-weight: 400;
+}
+
+.item-status{
+    color: #D25236;
+    font-weight: 400;
+}
+
+
+@media screen and(max-width: 1200px) {
+    .item{
+        flex-basis: 300px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .title{font-size: 20px;}
+}

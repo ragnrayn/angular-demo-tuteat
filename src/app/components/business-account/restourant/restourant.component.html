@@ -1,0 +1,199 @@
+<div class="restourants" [ngSwitch]="addRestourant">
+    <div *ngSwitchCase="'switchToDefault'">
+        <div class="title">Ресторани</div>
+        <div class="add-card">
+            Додати
+            <div class="add-card-btn">
+                <input class="card__options-checbox" (click)="switchTo()" type="checkbox" name="nuts" id="card-nuts" />
+                <label class="card__options-label" for="card-nuts"></label>
+            </div>
+        </div>
+        <div class="no-restourant">
+            У вас ще не доданого жодного ресторану, але ми чекаємо його ТУТ
+        </div>
+    </div>
+    <div class="add-restourant" *ngSwitchCase="'switchToAdd'">
+        <div class="title">Додати ресторани</div>
+        <div class="add-form">
+            <div class="field">
+                <div class="field">
+                    Назва
+                </div>
+                <div class="field-input">
+                    <input type="text" placeholder="Ресторан 1">
+                </div>
+            </div>
+            <div class="field">
+                <div class="title">Адреса</div>
+                <div class="location">
+                    Локація
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    Місто
+                </div>
+                <div class="field-input">
+                    <input type="text" placeholder="Київ">
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    Вулиця
+                </div>
+                <div class="field-input">
+                    <input type="text" placeholder="Тараса Шевченка">
+                </div>
+            </div>
+            <div class="fields">
+                <div>
+                    <div class="fields-title">Будинок</div>
+                    <input type="text">
+                </div>
+                <div>
+                    <div class="fields-title">Індекс</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="field">
+                <div class="title">
+                    Час роботи
+                </div>
+                <div class="schedule">
+                    <div class="day">Понеділок</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">Вівторок</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">Середа</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">Четвер</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">П’ятниця</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">Субота</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="day">Неділя</div>
+                    <div class="is-work"><input type="checkbox" class="apple-switch"></div>
+                    <div class="day-start">
+                        <select name="" id="">
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </div>
+                    <div class="day-end">
+                        <select name="" id="">
+                            <option value="23:00">23:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="title">Контактна особа</div>
+                <div class="field">
+                    <div class="field">
+                        ПІБ
+                    </div>
+                    <div class="field-input">
+                        <input type="text" placeholder="Олена Степанівна">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field">
+                        Посада
+                    </div>
+                    <div class="field-input">
+                        <input type="text" placeholder="Директор">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field">Номер телефону</div>
+                    <div class="field-flex">
+                        <div class="select-signup">
+                            <select name="" id="" class="select">
+                                <option value="+380" selected>+380</option>
+                                <option value="+44" selected>+44</option>
+                            </select>
+                        </div>
+                        <div class="login-block_input phone-input phone-width">
+                            <input type="text" placeholder="Номер телефону">
+                        </div>
+                    </div>
+                </div>
+                <div class="save-btn">
+                    <button type="button">Зберегти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

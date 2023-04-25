@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="title">Додати банківську карту</div>
+    <div class="card-fields">
+        <div class="field">
+            <div class="field-title">Номер картки</div>
+            <input type="text" [(ngModel)]="cardData.cardNumber" placeholder="Номер картки">
+        </div>
+        <div class="fields">
+            <div>
+                <div class="field-title">Дійсний до</div>
+                <input type="text" [(ngModel)]="cardData.cardDate" placeholder="MM/YY">
+            </div>
+            <div>
+                <div class="field-title">CVV</div>
+                <input type="password" [(ngModel)]="cardData.cardCvv" placeholder="354">
+            </div>
+        </div>
+        <div class="submit-card">
+            <button (click)="addCard()">Підтвердити</button>
+        </div>
+    </div>
+</div>

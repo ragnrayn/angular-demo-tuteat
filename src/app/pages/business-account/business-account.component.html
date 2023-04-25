@@ -1,0 +1,74 @@
+<app-header [businessAccount]="true" (menuStyling)="toggleMenu($event)"></app-header>
+
+<div class="business-account">
+    <div class="business-menu">
+        <div class="title">Ресторан</div>
+        <ul>
+            <li>
+                <a routerLink="information" routerLinkActive="active" class="menu-link">
+                    <svg class="menu-icon" width="32" height="32" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="12" r="6" />
+                        <path
+                            d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    Інформація
+                </a>
+            </li>
+            <li>
+                <a routerLink="restourant" routerLinkActive="active" class="menu-link">
+                    <svg class="menu-icon" width="32" height="32" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="12" r="6" />
+                        <path
+                            d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    Ресторани
+                </a>
+            </li>
+            <li>
+                <a routerLink="menu" routerLinkActive="active" class="menu-link">
+                    <svg class="menu-icon" width="32" height="32" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="12" r="6" />
+                        <path
+                            d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    Меню
+                </a>
+            </li>
+            <li>
+                <a routerLink="integration" routerLinkActive="active" class="menu-link">
+                    <svg class="menu-icon" width="32" height="32" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="12" r="6" />
+                        <path
+                            d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    Інтеграція
+                </a>
+            </li>
+            <li>
+                <a routerLink="reports" routerLinkActive="active" class="menu-link">
+                    <svg class="menu-icon" width="32" height="32" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="12" r="6" />
+                        <path
+                            d="M24.2612 24.5H7.73884C8.60386 21.7965 11.7473 19.5 16 19.5C20.2527 19.5 23.3961 21.7965 24.2612 24.5Z"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    Звіти
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="business-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -2,6 +2,10 @@
 
 .information {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 input {
@@ -79,4 +83,42 @@ select {
     right: 30px;
     top: 25px;
     cursor: pointer;
+}
+
+.delete-account button{
+    background-color: transparent;
+    border: 0;
+    color: #D25236;
+}
+
+@media screen and (max-width: 1040px) {
+    .field-row{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .field{
+        margin-left: unset !important;
+        margin-top: 20px;
+    }
+
+    .delete-account{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .field-row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field{
+        margin-left: unset !important;
+        margin-top: 20px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
 }

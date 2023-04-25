@@ -1,0 +1,84 @@
+@import "../../../../assets/styles/variables.less";
+.title {
+    margin-bottom: 36px;
+}
+
+details>summary {
+    list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+details{
+    width: 100%;
+}
+
+details[open] .details-arrow{
+    transform: rotate(180deg);
+}
+
+summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-left{
+    display: flex;
+    align-items: center;
+}
+
+.details-checkbox{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    width: 24px;
+    height: 24px;
+}
+
+.details-title{
+    font-size: 18px;
+    color: @default-10;
+    font-weight: 500;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #D1D5FF;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.list-item:last-child{
+    border-bottom: 0;
+}
+
+.item-left{
+    display: flex;
+    align-items: center;
+}
+
+.item-image{
+    margin-right: 20px;
+}
+
+.item-right{
+    display: flex;
+    align-items: center;
+}
+
+.item-stock{
+    margin-left: 100px;
+}
+
+
+.item-stock{
+    color: #92BC1B;
+}

@@ -1,0 +1,97 @@
+@import "../../../assets/styles/variables.less";
+
+.title {
+    margin-bottom: 50px;
+}
+
+.card-svg {
+    width: 41px;
+    margin-right: 10px;
+}
+
+.card {
+    display: grid;
+    grid-auto-flow: column;
+    place-content: flex-start;
+    place-items: center;
+    grid-template-columns: repeat(3, minmax(0, 100px));
+}
+
+.card input {
+    margin-left: 50px;
+}
+
+.card-list li:first-child {
+    margin-top: 0;
+}
+
+.card-list li {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 42px 100px;
+}
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 24px;
+    height: 24px;
+    border: 0.15em solid #6570E3;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.85em;
+    height: 0.85em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #6570E3;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.add-card {
+    margin-top: 60px;
+    color: @default-10;
+    font-size: 16px;
+}
+
+.card__options-checbox {
+    display: none;
+
+    &:checked+.card__options-label {
+        background: @purple-80 url(../../../assets/icons/card/check.svg) center center/12px no-repeat;
+    }
+}
+
+.card__options-label {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: @purple-10 url(../../../assets/icons/card/plus.svg) center center/16px no-repeat;
+    cursor: pointer;
+}
+
+.add-card{
+    display: flex;
+    align-items: center;
+}
+
+.add-card-btn{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}

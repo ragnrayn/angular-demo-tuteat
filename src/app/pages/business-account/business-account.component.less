@@ -1,0 +1,79 @@
+@import "../../../assets/styles/variables.less";
+.business-account{
+    width: 100%;
+    max-width: 1192px;
+    min-height: 671px;
+    display: flex;
+    margin: 50px auto;
+}
+
+.business-content{
+    padding-left: 57px;
+    width: 100%;
+}
+
+.business-menu{
+    width: 100%;
+    max-width: 364px;
+    padding-right: 57px;
+    border-right: 2px solid #E9EBFF;
+}
+
+.title{
+    font-size: 20px;
+    color: @default-10;
+    margin-top: -10px;
+    font-weight: 500;
+}
+
+.link-icon{width: 32px;}
+
+.menu-icon{
+    width: unset;
+    margin-right: 10px;
+}
+
+.business-menu ul{
+    margin-top: 35px;
+}
+
+
+.business-menu ul li:first-child{margin-top: 0;}
+.business-menu ul li{margin-top: 15px;}
+
+.menu-link{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 15px;
+    width: 100%;
+    color: @default-10;
+    border-radius: 16px;
+}
+
+.active{
+    background: #E9EBFF;
+    color: #6570E3 !important;
+}
+
+svg{
+    fill: @default-10;
+}
+
+.active svg { fill: #6570E3; }
+
+@media screen and (max-width: 600px) {
+    .business-menu{
+        display: none;
+    }
+
+    .open{
+        display: block;
+        position: absolute;
+        border: 0;
+        background: #fff;
+        padding: 0 15px;
+        margin: unset;
+        z-index: 999;
+        max-width: unset;
+    }
+}

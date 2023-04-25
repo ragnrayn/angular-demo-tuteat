@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -9,7 +11,30 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./header.component.less'],
   imports: [CommonModule, ModalComponent]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @Input() addressData: any;
+  @Input() businessAccount: boolean = false;
+  @Output() menuStyling = new EventEmitter();
+
+  isOpenMenu: boolean = false;
   isModalOpened: boolean = false;
+  userName: string = "";
+
+  constructor(private authService: AuthService, private router: Router){}
+
+  ngOnInit(): void {
+    this.authService.getClientProfile().subscribe(data => {console.log("Header user", data); this.userName = data.name})
+  }
+
+  mobileStyling(value: boolean): void {
+    this.menuStyling.emit(value);
+  }
+
+  routeToDashboard(): void {
+    if(this.userName){
+      this.isModalOpened = false;
+      this.router.navigate(["dashboard/information"]);
+    }
+  }
+
 }

@@ -8,12 +8,13 @@
             <div class="address-login_block">
                 <p class="address" *ngIf="addressData"><img src="assets/icons/location-icon.svg"
                         style="width: 25px; margin-right: 15px;" />{{ addressData }}</p>
-                <button class="btn start" (click)="isModalOpened=true">Почати</button>
+                <button *ngIf="businessAccount === false" class="btn start" (click)="isModalOpened=true; routeToDashboard()">{{ userName ? userName : 'Почати' }}</button>
+                <button *ngIf="businessAccount" class="btn start">Ресторан</button>
             </div>
             <div class="burger">
-                <a href="#">
-                    <img src="assets/icons/user-icon.svg" style="width: 60px;" alt="">
-                </a>
+                <span (click)="mobileStyling(isOpenMenu = !isOpenMenu)">
+                    <img src="assets/icons/account-border.svg" style="width: 60px;" alt="">
+                </span>
                 <span></span>
                 <span></span>
                 <span></span>
